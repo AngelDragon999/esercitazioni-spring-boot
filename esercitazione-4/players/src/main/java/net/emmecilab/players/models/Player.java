@@ -5,12 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="player")
+@Entity            // ENTITA' CHE DEVONO ESSERE MAPPATE PER GENERARE TABELLE DB.
+@Table(name="player")// NOME TABELLA SPECIFICATO
 public class Player {
 
-    @Id
-    @GeneratedValue
+    @Id           //CHIAVE PRIMARIA
+    @GeneratedValue // COME VENGONO GENREATI I VALORI
     private Long id;
     private String firstName;
     private String lastName;

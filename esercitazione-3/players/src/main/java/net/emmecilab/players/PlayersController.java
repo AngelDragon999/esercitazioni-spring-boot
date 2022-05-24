@@ -36,11 +36,15 @@ public class PlayersController {
 		playerService.addPlayer(player);
 	}
 	
+	//Aggiornamento del valore 
+	
 	@RequestMapping(value = "/players/{id}", method = RequestMethod.PUT)
-	public void updatePlayer(@PathVariable int id, @RequestBody Player player){
+	public void updatePlayer(@PathVariable int id, @RequestBody Player player){ //Richiesta delle informazioni dal Players
 		playerService.updatePlayer(id, player);
 	}
 
+	//Eliminazione del valore
+	
 	@RequestMapping(value = "/players/{id}", method = RequestMethod.DELETE)
 	public void deletePlayer(@PathVariable int id){
 		playerService.deletePlayer(id);
